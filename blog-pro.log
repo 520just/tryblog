@@ -1,0 +1,91 @@
+2021-08-28 10:44:02.294  INFO 10504 --- [restartedMain] com.jian.MyblogApplication               : Starting MyblogApplication using Java 15.0.2 on DESKTOP-C5VEIVA with PID 10504 (F:\桌面\框架学习\myblog\target\classes started by 520just in F:\桌面\框架学习\myblog)
+2021-08-28 10:44:02.369  INFO 10504 --- [restartedMain] com.jian.MyblogApplication               : The following profiles are active: dev
+2021-08-28 10:44:02.692  INFO 10504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 10:44:02.693  INFO 10504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 10:44:05.923  INFO 10504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 10:44:05.987  INFO 10504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 10:44:05.987  INFO 10504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-28 10:44:06.149  INFO 10504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-28 10:44:06.149  INFO 10504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3455 ms
+2021-08-28 10:44:07.606  INFO 10504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 10:44:08.885  INFO 10504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 10:44:08.949  INFO 10504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-28 10:44:08.963  INFO 10504 --- [restartedMain] com.jian.MyblogApplication               : Started MyblogApplication in 7.666 seconds (JVM running for 9.576)
+2021-08-28 10:44:09.821  INFO 10504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-28 10:44:09.821  INFO 10504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-28 10:44:09.823  INFO 10504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-28 10:44:11.634  INFO 10504 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 10:44:12.105  INFO 10504 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-28 10:46:05.716  INFO 3680 --- [restartedMain] com.jian.MyblogApplication               : Starting MyblogApplication using Java 15.0.2 on DESKTOP-C5VEIVA with PID 3680 (F:\桌面\框架学习\myblog\target\classes started by 520just in F:\桌面\框架学习\myblog)
+2021-08-28 10:46:05.719  INFO 3680 --- [restartedMain] com.jian.MyblogApplication               : The following profiles are active: dev
+2021-08-28 10:46:05.804  INFO 3680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 10:46:05.804  INFO 3680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 10:46:06.957  INFO 3680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 10:46:06.965  INFO 3680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 10:46:06.965  INFO 3680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-28 10:46:07.022  INFO 3680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-28 10:46:07.023  INFO 3680 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1218 ms
+2021-08-28 10:46:07.581  INFO 3680 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 10:46:07.782  INFO 3680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 10:46:07.838  INFO 3680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-28 10:46:07.861  INFO 3680 --- [restartedMain] com.jian.MyblogApplication               : Started MyblogApplication in 2.609 seconds (JVM running for 3.525)
+2021-08-28 10:46:07.894  INFO 3680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-28 10:46:07.895  INFO 3680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-28 10:46:07.897  INFO 3680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-08-28 10:46:10.767  INFO 3680 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 10:46:10.871  INFO 3680 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-28 10:46:49.340  WARN 3680 --- [http-nio-8080-exec-2] o.springframework.validation.DataBinder  : Skipping URI variable 'id' because request contains bind value with same name.
+2021-08-28 10:47:44.175  INFO 11800 --- [restartedMain] com.jian.MyblogApplication               : Starting MyblogApplication using Java 15.0.2 on DESKTOP-C5VEIVA with PID 11800 (F:\桌面\框架学习\myblog\target\classes started by 520just in F:\桌面\框架学习\myblog)
+2021-08-28 10:47:44.178  INFO 11800 --- [restartedMain] com.jian.MyblogApplication               : The following profiles are active: dev
+2021-08-28 10:47:44.229  INFO 11800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 10:47:44.230  INFO 11800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 10:47:45.315  INFO 11800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 10:47:45.323  INFO 11800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 10:47:45.323  INFO 11800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-28 10:47:45.387  INFO 11800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-28 10:47:45.388  INFO 11800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1158 ms
+2021-08-28 10:47:45.937  INFO 11800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 10:47:46.201  INFO 11800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 10:47:46.236  INFO 11800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-28 10:47:46.248  INFO 11800 --- [restartedMain] com.jian.MyblogApplication               : Started MyblogApplication in 3.28 seconds (JVM running for 4.964)
+2021-08-28 10:47:47.013  INFO 11800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-28 10:47:47.013  INFO 11800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-28 10:47:47.014  INFO 11800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-28 10:47:48.478  INFO 11800 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 10:47:48.588  INFO 11800 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-28 10:48:03.490  INFO 8508 --- [restartedMain] com.jian.MyblogApplication               : Starting MyblogApplication using Java 15.0.2 on DESKTOP-C5VEIVA with PID 8508 (F:\桌面\框架学习\myblog\target\classes started by 520just in F:\桌面\框架学习\myblog)
+2021-08-28 10:48:03.493  INFO 8508 --- [restartedMain] com.jian.MyblogApplication               : The following profiles are active: dev
+2021-08-28 10:48:03.545  INFO 8508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 10:48:03.545  INFO 8508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 10:48:04.605  INFO 8508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 10:48:04.611  INFO 8508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 10:48:04.612  INFO 8508 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-28 10:48:04.679  INFO 8508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-28 10:48:04.680  INFO 8508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1134 ms
+2021-08-28 10:48:05.254  INFO 8508 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 10:48:05.478  INFO 8508 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 10:48:05.523  INFO 8508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-28 10:48:05.533  INFO 8508 --- [restartedMain] com.jian.MyblogApplication               : Started MyblogApplication in 2.681 seconds (JVM running for 4.02)
+2021-08-28 10:48:05.560  INFO 8508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-28 10:48:05.562  INFO 8508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-28 10:48:05.564  INFO 8508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-28 10:48:07.290  INFO 8508 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 10:48:07.389  INFO 8508 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-28 10:49:13.137  INFO 6300 --- [restartedMain] com.jian.MyblogApplication               : Starting MyblogApplication using Java 15.0.2 on DESKTOP-C5VEIVA with PID 6300 (F:\桌面\框架学习\myblog\target\classes started by 520just in F:\桌面\框架学习\myblog)
+2021-08-28 10:49:13.143  INFO 6300 --- [restartedMain] com.jian.MyblogApplication               : The following profiles are active: dev
+2021-08-28 10:49:13.330  INFO 6300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 10:49:13.331  INFO 6300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 10:49:15.560  INFO 6300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 10:49:15.568  INFO 6300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 10:49:15.569  INFO 6300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-28 10:49:15.627  INFO 6300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-28 10:49:15.628  INFO 6300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2295 ms
+2021-08-28 10:49:16.118  INFO 6300 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 10:49:16.301  INFO 6300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 10:49:16.338  INFO 6300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-28 10:49:16.351  INFO 6300 --- [restartedMain] com.jian.MyblogApplication               : Started MyblogApplication in 4.835 seconds (JVM running for 6.375)
+2021-08-28 10:49:19.736  INFO 6300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-28 10:49:19.737  INFO 6300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-28 10:49:19.737  INFO 6300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-08-28 10:49:21.913  INFO 6300 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 10:49:22.060  INFO 6300 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

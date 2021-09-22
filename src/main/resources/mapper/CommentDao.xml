@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jian.dao.CommentDao">
+
+    <resultMap id="comment" type="com.jian.entity.Comment">
+        <id property="id" column="id"/>
+        <result property="nickname" column="nickname"/>
+        <result property="email" column="email"/>
+        <result property="content" column="content"/>
+        <result property="avatar" column="avatar"/>
+        <result property="creatTime" column="creat_time"/>
+        <result property="blogId" column="blog_id"/>
+        <result property="parentCommentId" column="parent_comment_id"/>
+        <result property="adminComment" column="admin_comment"/>
+    </resultMap>
+
+    <!--查询顶层评论-->
+    <select id="getCommentByBlogId" resultMap="comment">
+        select * from blog.t_comment c where c.blog_id = #{id} and c.parent_comment_id = -1
+    </select>
+
+    <!--查询次层评论-->
+    <select id="getCommentByParentId" resultMap="comment">
+        select * from blog.t_comment c where c.parent_comment_id = #{id}
+    </select>
+
+    <!--新增评论-->
+    <insert id="saveComment" parameterType="com.jian.entity.Comment">
+        insert into blog.t_comment
+            (id,nickname,email,content,avatar,creat_time,blog_id,parent_comment_id,admin_comment)
+        values (#{id},#{nickname},#{email},#{content},#{avatar},#{creatTime},#{blogId},#{parentCommentId},#{adminComment})
+    </insert>
+
+    <delete id="delComment" parameterType="Long">
+        delete from blog.t_comment c where c.id = #{id}
+    </delete>
+
+    <delete id="delBlogCommentsByBlogId">
+        delete from blog.t_comment where blog_id = #{blogId}
+    </delete>
+
+    <update id="updateComments" parameterType="Long">
+        update blog.t_comment c set c.parent_comment_id = #{parentId} where c.parent_comment_id = #{id}
+    </update>
+
+</mapper>

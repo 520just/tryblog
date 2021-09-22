@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jian.dao.BlogDao">
+
+    <!--删除文章-->
+    <delete id="delBlogByBlogId">
+        delete from blog.t_blog where id = #{blogId}
+    </delete>
+
+    <!--管理页面搜索文章-->
+    <select id="getAllBlog" resultType="com.jian.queryvo.SearchBlog">
+        select b.id,b.title,t.name as typeName,b.recommend,b.published,b.update_time as updateTime
+        from blog.t_blog b,blog.t_type t
+        where b.type_id = t.id
+    </select>
+    
+    <!--搜索文章-->
+    <select id="getBlogBySearch" resultType="com.jian.queryvo.SearchBlog">
+        <bind name="pattern" value="'%' + title + '%'" />
+        select b.id,b.title,t.name as typeName,b.recommend,b.published,b.update_time as updateTime
+        from blog.t_blog b,blog.t_type t
+        where b.type_id = t.id
+            <if test="title != null">
+                and b.title like #{pattern}
+            </if>
+            <if test="typeId != null">
+                and t.id = #{typeId}
+            </if>
+    </select>
+
+    <!--新增文章-->
+    <insert id="saveBlog" parameterType="com.jian.entity.Blog">
+        insert into blog.t_blog
+            (flag, title, content, user_id, type_id, first_picture, description,
+             recommend, share_statement, appreciation, commentabled, published, views,
+             comment_count, create_time, update_time)
+            VALUE (#{flag},#{title},#{content},#{userId},#{typeId},#{firstPicture},#{description},
+                   #{recommend},#{shareStatement},#{appreciation},#{commentabled},#{published},#{views},
+                   #{commentCount},#{createTime},#{updateTime})
+    </insert>
+
+    <!--编辑修改文章-->
+    <update id="updateBlog" parameterType="com.jian.queryvo.ShowBlog">
+        update blog.t_blog set flag=#{flag},title=#{title},content=#{content},type_id=#{typeId},first_picture=#{firstPicture},
+                               description=#{description},recommend=#{recommend},published=#{published},share_statement=#{shareStatement},
+                               appreciation=#{appreciation},commentabled=#{commentabled},update_time=#{updateTime}
+            where id = #{id}
+    </update>
+
+    <resultMap id="recommendBlog" type="com.jian.queryvo.RecommendBlog">
+        <id property="id" column="id"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="title" column="title"/>
+    </resultMap>
+
+    <!--推荐文章-->
+    <select id="getAllRecommendBlog" resultMap="recommendBlog">
+        select *
+        from blog.t_blog
+        where recommend = true
+        order by update_time desc limit 4
+    </select>
+
+    <resultMap id="firstPageBlog" type="com.jian.queryvo.FirstPageBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="avatar" column="avatar"/>
+        <result property="nickname" column="nickname"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="views" column="views"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="typeName" column="name"/>
+    </resultMap>
+
+    <!--最新文章-->
+    <select id="getFirstPageBlog" resultMap="firstPageBlog">
+        select b.id, b.title, b.description, b.first_picture, b.update_time, b.views, b.comment_count,
+            u.avatar, u.nickname,
+            t.name
+        from blog.t_blog b, blog.t_type t, blog.t_user u
+        where b.user_id = u.id and b.type_id = t.id
+        order by b.update_time desc
+    </select>
+
+    <!--搜索文章-->
+    <select id="getSearchBlog" resultMap="firstPageBlog">
+        <bind name="pattern" value="'%'+query+'%'"/>
+        select b.id, b.title, b.description, b.first_picture, b.update_time, b.views, b.comment_count,
+            u.avatar, u.nickname,
+            t.name
+        from blog.t_blog b, blog.t_type t, blog.t_user u
+        where b.user_id = u.id and b.type_id = t.id and (b.title like #{pattern} or b.content like #{pattern})
+        order by b.update_time desc
+    </select>
+
+    <!--通过分类获取文章列表-->
+    <select id="getBlogByTypeId" parameterType="Long" resultMap="firstPageBlog">
+        select b.id, b.title, b.description, b.first_picture, b.update_time, b.views, b.comment_count,
+               u.avatar, u.nickname,
+               t.name
+        from blog.t_blog b, blog.t_type t, blog.t_user u
+        where b.user_id = u.id and b.type_id = t.id and t.id = #{typeId}
+        order by b.update_time desc
+    </select>
+
+    <!--查看详细博客-->
+    <resultMap id="detailedBlog" type="com.jian.queryvo.DetailedBlog">
+        <id property="id" column="id"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="flag" column="flag"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="views" column="views"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="commentabled" column="commentabled"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+        <result property="typeName" column="name"/>
+    </resultMap>
+
+    <select id="getDetailedBlog" parameterType="Long" resultMap="detailedBlog">
+        select b.id, b.first_picture, b.flag, b.title, b.content,
+               b.views, b.comment_count, b.update_time, b.commentabled, b.share_statement, b.appreciation,
+            u.nickname, u.avatar,
+            t.name
+        from blog.t_blog b, blog.t_type t, blog.t_user u
+        where b.user_id = u.id and b.type_id = t.id and b.id = #{id}
+    </select>
+
+    <!--更新查看数-->
+    <update id="updateViews" parameterType="Long">
+        update blog.t_blog b set b.views = b.views+1 where b.id = #{id}
+    </update>
+
+    <!--更新评论数-->
+    <update id="updateCommentCount" parameterType="Long">
+        update blog.t_blog b set b.comment_count = (
+            select count(*) from blog.t_comment c where c.blog_id = #{id}
+            )
+        where b.id = #{id}
+    </update>
+
+    <!--查询博客数据-->
+    <select id="getBlogCount" resultType="Integer">
+        select count(*) from blog.t_blog
+    </select>
+
+    <select id="getBlogViewCount" resultType="Integer">
+        select count(views) from blog.t_blog
+    </select>
+
+    <select id="getCommentCount" resultType="Integer">
+        select count(*) from blog.t_comment
+    </select>
+
+    <select id="getMessageCount" resultType="Integer">
+        select count(*) from blog.t_message
+    </select>
+
+    <!--获取修改用博客-->
+    <select id="getShowBlogByBlogId" resultType="com.jian.queryvo.ShowBlog">
+        select id,flag,title,content,type_id typeId,first_picture firstPicture,description,recommend,published,share_statement shareStatement,appreciation,commentabled,update_time updateTime
+        from blog.t_blog
+        where id = #{blogId}
+    </select>
+
+</mapper>

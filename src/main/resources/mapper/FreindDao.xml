@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jian.dao.FriendDao">
+
+    <select id="getFriends" resultType="com.jian.entity.Friend">
+        select id, name, url, picture from blog.t_friend order by create_time desc
+    </select>
+
+    <select id="getAllFriendLinks" resultType="com.jian.entity.Friend">
+        select id, name, url, picture, create_time as createTime from blog.t_friend
+    </select>
+
+    <select id="getFriendLinkById" resultType="com.jian.entity.Friend">
+        select id, name, url, picture, create_time as createTime from blog.t_friend where id = #{id}
+    </select>
+
+    <select id="getFriendLinkByUrl" resultType="com.jian.entity.Friend">
+        select id, name, url, picture, create_time as createTime from blog.t_friend where url = #{url}
+    </select>
+
+    <insert id="saveFriendLink" parameterType="com.jian.entity.Friend">
+        insert into blog.t_friend (name, url, picture, create_time) VALUE (#{name},#{url},#{picture},#{createTime})
+    </insert>
+
+    <update id="updateFriendLink" parameterType="com.jian.entity.Friend">
+        update blog.t_friend set name = #{name}, url = #{url}, picture = #{picture}, create_time = #{createTime} where id = #{id}
+    </update>
+
+    <delete id="delFriendLink">
+        delete from blog.t_friend where id = #{id}
+    </delete>
+
+</mapper>
